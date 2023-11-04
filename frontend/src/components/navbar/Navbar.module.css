@@ -1,0 +1,35 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.img{
+    vertical-align: middle;
+}
+.sideContainer{
+    display: flex;
+    gap: 1rem;
+}
+.linkname{
+    width: 8rem;
+    height: 1.87rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    color: white;
+    background-color: #001C30;
+    border: 1px solid #001C30;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.linkname:hover{
+    border: 2px solid white;
+}
+
+@media only screen and (max-width: 600px){
+    .linkname{
+        width: 6rem;
+        font-weight: 700;
+    }
+}

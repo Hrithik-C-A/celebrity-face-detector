@@ -1,0 +1,27 @@
+.imageContainer {
+    margin-top: 0.5rem;
+    text-align: center;
+  }
+  
+  .imageSize {
+    width: 100%; 
+    height: auto;
+    max-width: 500px; 
+  }
+  
+  .boxContainer {
+    position: relative; 
+    margin: 0 auto; 
+    max-width: 500px; 
+  }
+  
+  .boundingBox {
+    position: absolute;
+    box-shadow: 0 0 0 3px #149df2 inset;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  

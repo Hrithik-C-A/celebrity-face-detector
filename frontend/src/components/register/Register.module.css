@@ -1,0 +1,51 @@
+.mainContainer{
+    margin-top: 18vh;
+}
+.formContainer{
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    height: 20rem;
+    width: 20rem;
+    margin: auto;
+}
+.heading{
+    color: white;
+}
+.inputContainer{
+    width: 12rem;
+    height: 1.8rem;
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid white;
+}
+.signinButton{
+    width: 8rem;
+    height: 1.8rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    color: white;
+    background-color: #001C30;
+    border: 1px solid #001C30;
+}
+.signinButton:hover{
+    border: 2px solid white;
+}
+.link{
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: small;
+    font-weight: 600;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.link:hover{
+    text-decoration: underline;
+}
