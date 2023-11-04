@@ -140,18 +140,26 @@ export default class App extends Component {
     onInputChange = (event)=>{
         this.setState({input : event.target.value,})
     }
-    onPictureSubmit = ()=>{
-        this.setState({imageUrl: this.state.input})
+    onPictureSubmit = async ()=>{
+        this.setState({imageUrl: this.state.input});
 
-        fetch('http://localhost:5000/imageurl', {
+        const fetchUrl = (url) => fetch(url, {
             method: 'post',
             headers: {'Content-Type':'application/json'},
             body: JSON.stringify({
               imageUrl: this.state.input
             })
         })
-        .then(response => response.json())
-        .then(result => {
+
+        const url1 = 'http://localhost:5000/imageurl';
+        const url2 = 'http://localhost:5000/imageurl/celebrity';
+
+        const responses = await Promise.all([fetchUrl(url1), fetchUrl(url2)]);
+
+        const data1 = responses[0].json();
+        const data2 = responses[1].json();
+
+        data1.then(result => {
             if(result){
                 fetch('http://localhost:5000/image',{
                     method: 'put',
@@ -167,11 +175,10 @@ export default class App extends Component {
                     }))
                   })
                   .catch(console.log)
-            }
-            this.displayFaceBox(this.calculateFaceBox(result))
-        })
-        .catch(err => console.log('error',err))
-        
+                }
+
+                this.displayFaceBox(this.calculateFaceBox(result));
+        }).catch(console.log);
 
     }
     onRouteChange = (route)=>{
