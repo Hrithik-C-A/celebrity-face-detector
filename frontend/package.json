@@ -1,6 +1,7 @@
 {
-  "name": "smartbrain",
+  "name": "cfd-frontend",
   "private": true,
+  "author": "Hrithik C A",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
