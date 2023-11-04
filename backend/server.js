@@ -6,7 +6,7 @@ import bcrypt from 'bcrypt';
 import cors from 'cors';
 import { handleSignin } from './controllers/signin.js';
 import { handleRegister } from './controllers/register.js';
-import { handleImageApi, handleImageEntries } from './controllers/image.js';
+import { handleImageApi, handleImageEntries, handleCelebrityImageApi } from './controllers/image.js';
 import { handleProfileGet } from './controllers/profile.js';
 import knex from 'knex';
 
@@ -40,6 +40,8 @@ app.get('/profile/:id', (req, res)=> handleProfileGet(req, res, db));
 app.put('/image',(req, res)=> handleImageEntries(req, res, db));
 
 app.post('/imageurl', (req, res)=> handleImageApi(req, res));
+
+app.post('/imageurl/celebrity',(req, res)=> handleCelebrityImageApi(req, res, db));
 
 const __dirname = path.resolve();
 
