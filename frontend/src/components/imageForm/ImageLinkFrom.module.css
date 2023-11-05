@@ -3,14 +3,14 @@
     margin-top: 1rem;
     font-size: large;
     font-weight: 700;
-    color: white;
+    color: black;
 }
 .inputContainer{
     width: 20rem;
     height: 1.6rem;
     border-radius: 5px;
     text-align: center;
-    border: 1px solid white;
+    border: 1px solid black;
 }
 .buttonContainer{
     width: 8rem;

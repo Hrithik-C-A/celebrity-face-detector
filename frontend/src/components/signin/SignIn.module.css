@@ -2,26 +2,28 @@
     margin-top: 18vh;
 }
 .formContainer{
-    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.2), 0 4px 6px -4px rgb(0 0 0 / 0.3);
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     gap: 1rem;
     align-items: center;
     justify-content: center;
-    height: 20rem;
+    height: auto;
     width: 20rem;
+    padding: 20px 0;
     margin: auto;
 }
 .heading{
-    color: white;
+    color: black;
 }
 .inputContainer{
     width: 12rem;
     height: 1.8rem;
     border-radius: 5px;
     text-align: center;
-    border: 1px solid white;
+    background-color: #edeaea;
+    border: 1px solid black;
 }
 .signinButton{
     width: 8rem;
@@ -41,11 +43,14 @@
     cursor: pointer;
     font-size: small;
     font-weight: 700;
-    color: white;
+    color: black;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .link:hover{
     text-decoration: underline;
+}
+.loader{
+    text-align: center;
 }

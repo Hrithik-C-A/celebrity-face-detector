@@ -47,13 +47,13 @@ const particlesInit = async (main) => {
               },
               particles: {
                   color: {
-                      value: "#ffffff",
+                      value: "#000000",
                   },
                   links: {
-                      color: "#ffffff",
+                      color: "#808080",
                       distance: 150,
                       enable: true,
-                      opacity: 0.5,
+                      opacity: 0.2,
                       width: 1,
                   },
                   collisions: {

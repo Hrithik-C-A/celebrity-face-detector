@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './Navbar.module.css'
 import Tilt from 'react-parallax-tilt'
-import ml from './ml.svg'
+import  programmer  from '../../assets/programmer.png'
 
 export const Navbar = ({onRouteChange, isSignedIn}) => {
     if(isSignedIn) {
@@ -9,7 +9,7 @@ export const Navbar = ({onRouteChange, isSignedIn}) => {
         <nav className={styles.navbar}>
         <Tilt>
             <div>
-                <img className={styles.img} src={ml} options={{max: 55}} height={'80px'} alt='logo' />
+                <img className={styles.img} src={programmer} options={{max: 55}} height={'100px'} alt='logo' />
             </div>
         </Tilt>
         <p className={styles.linkname} onClick={()=>onRouteChange('signout')}>Sign Out</p>
@@ -20,7 +20,7 @@ export const Navbar = ({onRouteChange, isSignedIn}) => {
       <nav className={styles.navbar}>
       <Tilt>
           <div>
-              <img className={styles.img} src={ml} options={{max: 55}} height={'80px'} alt='logo' />
+              <img className={styles.img} src={programmer} options={{max: 55}} height={'100px'} alt='logo' />
           </div>
       </Tilt>
       <div className={styles.sideContainer}>
