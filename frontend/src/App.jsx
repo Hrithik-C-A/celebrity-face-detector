@@ -137,6 +137,14 @@ export default class App extends Component {
     displayFaceBox = (box)=>{
         this.setState({box: box});
     }
+    celebrityName = (data) => {
+        const names = data.response.outputs[0].data.concepts.find(item => item.value > 0.05);
+        
+        return {
+            name: names.name,
+            value: names.value
+        }
+    };
     onInputChange = (event)=>{
         this.setState({input : event.target.value,})
     }
@@ -176,7 +184,7 @@ export default class App extends Component {
                   })
                   .catch(console.log)
                 }
-
+                data2.then(result => this.celebrityName(result)).catch(console.log);
                 this.displayFaceBox(this.calculateFaceBox(result));
         }).catch(console.log);
 
