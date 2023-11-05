@@ -140,9 +140,9 @@ export default class App extends Component {
     }
     celebrityName = (data) => {
         const names = data.response.outputs[0].data.concepts;
-        
+        const capitalizedName = names[0].name.split(' ').map(item => item[0].toUpperCase() + item.slice(1)).join(' ');
         return {
-            name: names[0].name,
+            name: capitalizedName,
             value: names[0].value
         }
     };
