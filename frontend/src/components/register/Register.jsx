@@ -50,7 +50,7 @@ export const Register = ({onRouteChange,loadUser}) => {
               colors={['#e15b64', '#f47e60', '#f8b26a', '#abbd81', '#849b87']}
             />
           </div>) }
-            <p className={styles.link} onClick={()=>onRouteChange('signin')}>Sign In</p>
+            <p className={styles.link}>Already an user? <span className={styles.spanLink} style={{ marginLeft: '10px' }} onClick={()=>onRouteChange('signin')}>Sign in</span></p>
         </form>
     </div>
   )

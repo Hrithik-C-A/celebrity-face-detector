@@ -40,7 +40,6 @@
 }
 .link{
     border-radius: 5px;
-    cursor: pointer;
     font-size: small;
     font-weight: 600;
     color: black;
@@ -48,8 +47,11 @@
     justify-content: center;
     align-items: center;
 }
-.link:hover{
-    text-decoration: underline;
+.spanLink{
+    cursor: pointer;
+}
+.spanLink:hover{
+    color: blue;
 }
 .loader{
     text-align: center;
