@@ -93,6 +93,7 @@ const initialState =   {
     input: '',
     imageUrl: '',
     box: {},
+    celeb: {},
     route: 'signin',
     isSignedIn: false,
     user:{
@@ -138,19 +139,22 @@ export default class App extends Component {
         this.setState({box: box});
     }
     celebrityName = (data) => {
-        const names = data.response.outputs[0].data.concepts.find(item => item.value > 0.05);
+        const names = data.response.outputs[0].data.concepts;
         
         return {
-            name: names.name,
-            value: names.value
+            name: names[0].name,
+            value: names[0].value
         }
+    };
+    displayCelebrityName = (celeb) => {
+        this.setState({celeb: celeb});
     };
     onInputChange = (event)=>{
         this.setState({input : event.target.value,})
     }
     onPictureSubmit = async ()=>{
         this.setState({imageUrl: this.state.input});
-
+        this.setState({celeb: {}});
         const fetchUrl = (url) => fetch(url, {
             method: 'post',
             headers: {'Content-Type':'application/json'},
@@ -184,7 +188,7 @@ export default class App extends Component {
                   })
                   .catch(console.log)
                 }
-                data2.then(result => this.celebrityName(result)).catch(console.log);
+                data2.then(result => this.displayCelebrityName(this.celebrityName(result))).catch(console.log);
                 this.displayFaceBox(this.calculateFaceBox(result));
         }).catch(console.log);
 
@@ -199,7 +203,7 @@ export default class App extends Component {
             this.setState({route: route})
     }
   render() {
-    const {isSignedIn,box,imageUrl,route} = this.state;
+    const {isSignedIn, box, celeb, imageUrl ,route} = this.state;
     return (
       <div>
         <Particles
@@ -213,7 +217,7 @@ export default class App extends Component {
     <>  
         <Rank username={this.state.user.name} entries={this.state.user.entries} />
         <ImageLinkForm description={'This App detect faces. Give it a try.'} onInputChange={this.onInputChange} onPictureSubmit={this.onPictureSubmit}/>
-        <FaceRecognition box={box} imageUrl={imageUrl}/>
+        <FaceRecognition box={box} celeb={celeb} imageUrl={imageUrl}/>
     </>
         :
         (
