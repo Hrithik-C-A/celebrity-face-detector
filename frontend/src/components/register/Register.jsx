@@ -11,7 +11,7 @@ export const Register = ({onRouteChange,loadUser}) => {
   const onRegisterHandler = (e)=>{
     e.preventDefault();
     setIsLoading(true);
-    fetch('http://localhost:5000/register',{
+    fetch(`${import.meta.env.VITE_BASEURI}/register`,{
       method: 'post',
       headers: {'Content-Type':'application/json'},
       body: JSON.stringify({

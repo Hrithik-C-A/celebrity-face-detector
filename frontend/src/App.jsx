@@ -163,8 +163,8 @@ export default class App extends Component {
             })
         })
 
-        const url1 = 'http://localhost:5000/imageurl';
-        const url2 = 'http://localhost:5000/imageurl/celebrity';
+        const url1 = `${import.meta.env.VITE_BASEURI}/imageurl`;
+        const url2 = `${import.meta.env.VITE_BASEURI}/imageurl/celebrity`;
 
         const responses = await Promise.all([fetchUrl(url1), fetchUrl(url2)]);
 
@@ -173,7 +173,7 @@ export default class App extends Component {
 
         data1.then(result => {
             if(result){
-                fetch('http://localhost:5000/image',{
+                fetch(`${import.meta.env.VITE_BASEURI}/image`,{
                     method: 'put',
                     headers: {'Content-Type':'application/json'},
                     body: JSON.stringify({
