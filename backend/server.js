@@ -1,7 +1,6 @@
 import express from 'express';
 import dotenv from 'dotenv';
 dotenv.config();
-import path from 'path';
 import bcrypt from 'bcrypt';
 import cors from 'cors';
 import { handleSignin } from './controllers/signin.js';
@@ -29,7 +28,14 @@ const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
-app.use(cors());
+app.use(cors({
+    origin: `${process.env.FRONTEND_URI}`,
+    credentials: true
+}));
+
+app.get('/',(req, res)=>{
+    res.send('Api is running...')
+});
 
 app.post('/signin', (req, res)=> handleSignin(req, res, db, bcrypt));
 
@@ -42,20 +48,6 @@ app.put('/image',(req, res)=> handleImageEntries(req, res, db));
 app.post('/imageurl', (req, res)=> handleImageApi(req, res));
 
 app.post('/imageurl/celebrity',(req, res)=> handleCelebrityImageApi(req, res, db));
-
-const __dirname = path.resolve();
-
-if (process.env.NODE_ENV === 'production') {
-    app.use(express.static(path.join(__dirname, '/frontend/dist')));
-
-    app.get('*', (req, res) => {
-        res.sendFile(path.resolve(__dirname, 'frontend', 'dist', 'index.html'));
-    });
-} else {
-    app.get('/',(req, res)=>{
-        res.send('Api is running...')
-    });
-}
 
 app.listen(process.env.PORT,()=>{
     console.log('Server is running...');
