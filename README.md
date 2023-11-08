@@ -16,12 +16,9 @@ Celebrity face detector app that uses cutting edge machine learning api called C
 
 
 - User Registration: Seamlessly onboard users into your platform.
-
 - User Sign-In: Ensure secure access for registered users.
-
 - Face Detection: Harness the power of Clarifai API's face detection model to analyze images from URLs.
-
-- Fully mobile-responsive
+- Fully mobile-responsive.
 
 
 
