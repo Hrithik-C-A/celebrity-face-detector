@@ -1,7 +1,7 @@
 
 # Celebrity Face Detector App
 
-Celebrity face detector app that uses cutting edge machine learning api called Clarifai for seamless face detection and it has user registration, authentication and a requests counter to track number of api request made by the user.
+Celebrity face detector app uses cutting edge machine learning api called Clarifai for seamless face detection and it has user registration, authentication and a requests counter to track number of api request made by the user.
 
 ## Tech Stack
 
