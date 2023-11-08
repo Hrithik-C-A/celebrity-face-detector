@@ -22,6 +22,10 @@ Celebrity face detection app that uses cutting edge machine learning api called 
 
 
 
+https://github.com/Hrithik-C-A/celebrity-face-detector/assets/117261838/c84d7a8f-8a91-49bb-9650-854302b5be97
+
+
+
 ## Environment Variables
 
 To run this project, 
