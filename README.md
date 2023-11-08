@@ -163,5 +163,5 @@ https://celebrity-face-detector-hrithik-c-a.vercel.app/
 
 Copyright © 2023 [@Hrithik-C-A](https://github.com/Hrithik-C-A).
 
-This project is [MIT](https://choosealicense.com/licenses/mit/) licensed.
+This project is [MIT](./LICENCE.md) licensed.
 
