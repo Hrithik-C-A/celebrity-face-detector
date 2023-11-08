@@ -9,7 +9,7 @@ Celebrity face detector app uses cutting edge machine learning api called Clarif
 
 **Backend:** Node, Express, PostgreSQL
 
-**Libraries:** react-loader-spinner, react-parallax-tilt, react-tsparticles, bcrypt, cors, knex, pg, dotenv, nodemon
+**Dependencies:** react-loader-spinner, react-parallax-tilt, react-tsparticles, bcrypt, cors, knex, pg, dotenv, nodemon
 
 
 ## Features
