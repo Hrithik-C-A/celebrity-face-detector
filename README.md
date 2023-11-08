@@ -132,7 +132,7 @@ Go to the project directory
   cd celebrity-face-detector
 ```
 
-Go to the project backend directory, install dependencies and start the server
+Go to the project backend directory, install the dependencies and start the server
 
 ```bash
   cd backend
@@ -143,7 +143,7 @@ Go to the project backend directory, install dependencies and start the server
 ```
 
 
-Go to the project frontend directory, install dependencies and start the server
+Go to the project frontend directory, install the dependencies and start the server
 
 ```bash
   cd frontend
