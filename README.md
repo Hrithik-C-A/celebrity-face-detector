@@ -21,7 +21,7 @@ Celebrity face detector app that uses cutting edge machine learning api called C
 
 - Face Detection: Harness the power of Clarifai API's face detection model to analyze images from URLs.
 
-- Mobile responsive
+- Fully mobile-responsive
 
 
 
