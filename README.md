@@ -1,7 +1,15 @@
 
-# Postal Details Finder App
+# Celebrity Face Detector App
 
-Celebrity face detection app that uses cutting edge machine learning api called Clarifai for seamless face detection and it has user registration, authentication and a requests counter to track number of api request made by the user.
+Celebrity face detector app that uses cutting edge machine learning api called Clarifai for seamless face detection and it has user registration, authentication and a requests counter to track number of api request made by the user.
+
+## Tech Stack
+
+**Frontend:** React, Vite
+
+**Backend:** Node, Express, PostgreSQL
+
+**Libraries:** react-loader-spinner, react-parallax-tilt, react-tsparticles, bcrypt, cors, knex, pg, dotenv, nodemon
 
 
 ## Features
